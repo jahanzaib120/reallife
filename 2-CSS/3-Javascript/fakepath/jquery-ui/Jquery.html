@@ -1,0 +1,110 @@
+<html>
+ 
+ <head>
+ 
+ <title>JQuery</title>
+ 
+ <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/humanity/jquery-ui.css">
+ 
+ <style type="text/css">
+
+ body{
+ margin: 0 auto;
+ padding: 0;
+ font-family: Sans-serif;
+ font-style: red;
+ }
+ 
+ #topbar{
+  width: 1520px;
+  height: 40px;
+  background-color: silver;
+ }
+ 
+ #logo{
+  font-weight: bold;
+  padding: 3px;
+  font-size: 25px;
+ }
+ 
+ .toggleButton{
+  border: 1px solid grey;
+  float: left;
+  padding:4px;
+  position: relative;
+  left: 650px;
+  bottom: 29px;
+  border-right: none;
+ }
+ 
+ #html{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px
+  }
+ 
+ #output{
+  border-right: 1px solid grey;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px
+ }
+   
+ .active {
+  background-color: blue;
+ }
+ 
+ .highlightedButton{
+  background-color:  
+ }
+ 
+ #htmltextarea{
+  position: relative;
+  right: 235px;
+  width: 50%;
+  resize: none;
+ }
+ 
+ </style>
+ 
+ </head>
+ 
+ <body>
+  
+  
+<div id="topbar">
+ 
+  <div id="logo">CodePlayer</div>
+   
+   <div class="toggleButton active" id="html">HTML</div>
+  <div class="toggleButton" id="css">CSS</div>
+  <div class="toggleButton" id="javascript">Javascript</div>
+  <div class="toggleButton active" id="output">Output</div>
+  
+</div>
+
+  <textarea id="htmltextarea">Hello world</textarea>
+
+  <script type="text/javascript">
+ 
+   $(".toggleButton").hover(function() {
+   
+	 $(this).css("background-color", "red");
+	
+	 }, function() {
+	 
+   $(this).css("background-color", "silver");
+	
+   });
+   
+   $(".toggleButton").click(function() {
+   
+    $(this).toggleClass("active");
+	$(this).removeClass("highlightedButton");
+   
+   });
+ 
+  $("#htmltextarea").height($(window).height() - $("#topbar").height() - 15);
+ 
+   <script type="text/javascript">
+ 

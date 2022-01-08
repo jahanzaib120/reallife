@@ -1,0 +1,21 @@
+#shape {
+    width:200px;
+	height:200px;
+	background-color:red;
+	position:relative;
+	dispaly: none;
+    }
+	
+	.bold {
+	
+	font-weight:bold;
+	font-size:18px;
+	
+	}
+	
+	.bold-1 {
+	
+	font-size:21px;
+	
+	}
+	
